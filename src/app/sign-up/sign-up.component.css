@@ -1,0 +1,14 @@
+.signup-root {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: transparent;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  font-size: 1.25rem;
+}

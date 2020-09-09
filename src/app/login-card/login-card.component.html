@@ -1,0 +1,42 @@
+<div class="login-card">
+  <form class="login-form">
+    <mat-form-field>
+      <mat-label>E-mail</mat-label>
+      <input (keyup)="inputEmail($event)" matInput />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input (keyup)="inputPassword($event)" matInput type="password" />
+    </mat-form-field>
+  </form>
+  <div class="login-signup-container">
+    <button
+      (click)="login()"
+      mat-flat-button
+      color="primary"
+      class="login-button"
+    >
+      Login
+    </button>
+    <button
+      (click)="singUp()"
+      mat-flat-button
+      color="primary"
+      class="login-button"
+    >
+      Sign Up
+    </button>
+  </div>
+  <div class="text">or connect with</div>
+  <div class="icon-button-container">
+    <button mat-icon-button class="logo-button">
+      <mat-icon class="icon" svgIcon="facebook"></mat-icon>
+    </button>
+    <button mat-icon-button class="logo-button">
+      <mat-icon class="icon" svgIcon="google"></mat-icon>
+    </button>
+    <button mat-icon-button class="logo-button">
+      <mat-icon class="icon" svgIcon="github"></mat-icon>
+    </button>
+  </div>
+</div>

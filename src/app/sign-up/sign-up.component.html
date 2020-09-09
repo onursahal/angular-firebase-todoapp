@@ -1,0 +1,24 @@
+<div class="signup-root">
+  <form class="signup-form">
+    <mat-form-field>
+      <mat-label>E-mail</mat-label>
+      <input (keyup)="inputEmail($event)" matInput />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input (keyup)="inputPassword($event)" matInput type="password" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Full Name</mat-label>
+      <input (keyup)="inputFullName($event)" matInput />
+    </mat-form-field>
+  </form>
+  <button
+    (click)="signup()"
+    mat-flat-button
+    color="primary"
+    class="login-button"
+  >
+    Apply
+  </button>
+</div>
