@@ -1,0 +1,21 @@
+<div class="root">
+  <div class="top-container">
+    <mat-toolbar color="accent"
+      ><span class="header" *ngIf="user"
+        >{{ user.fullname }}'s Todos</span
+      ></mat-toolbar
+    >
+    <mat-action-list>
+      <div class="list-button-container" *ngFor="let todo of todos">
+        <button class="list-button" mat-list-item>{{ todo.name }}</button>
+        <button class="delete-todo" mat-list-item>
+          <mat-icon class="delete-icon">remove_circle_outline</mat-icon>
+        </button>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-action-list>
+  </div>
+  <div class="bottom-container">
+    <button class="new-todo" mat-flat-button color="primary">New Todo</button>
+  </div>
+</div>

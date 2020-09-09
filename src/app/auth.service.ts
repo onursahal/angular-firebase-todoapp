@@ -22,7 +22,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((response) => {
         console.log(response.user.uid);
-        this.router.navigate(['main']);
+        this.router.navigate(['dashboard']);
       })
       .catch((error) => {
         console.log(error);

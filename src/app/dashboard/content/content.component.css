@@ -1,0 +1,34 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.card-root {
+  margin: 1rem 1rem 0 1rem;
+  background-color: #ffffff66;
+  height: 85vh;
+}
+.todo-card {
+  margin: 1rem 0rem;
+  background-color: #ffd63f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo-content {
+  font-size: 1.5rem;
+  color: #900014;
+}
+.todo-button-group {
+  color: #900014;
+}
+.add-todo {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+.add-todo-button {
+  margin: 0 1rem 1rem 1rem;
+  align-self: flex-end;
+}

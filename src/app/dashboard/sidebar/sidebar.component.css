@@ -1,0 +1,42 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.top-container {
+  grid-row: 1/2;
+}
+.header {
+  color: #ffd63f;
+  border: 1px solid #900014;
+  background-color: #900014;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+}
+.bottom-container {
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.new-todo {
+  margin: 1rem;
+}
+.list-button-container {
+  display: grid;
+}
+.list-button {
+  grid-column: 1/20;
+  font-size: 1rem;
+  color: #900014;
+}
+.delete-todo {
+  grid-column: 20/21;
+  display: flex;
+  justify-content: flex-end;
+  color: #900014;
+}
+.delete-icon {
+  font-size: 1.25rem;
+}

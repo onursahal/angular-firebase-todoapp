@@ -1,0 +1,22 @@
+<div class="root">
+  <mat-card class="card-root">
+    <mat-card class="todo-card" *ngFor="let todo of todos">
+      <div class="todo-content">{{ todo.todo }}</div>
+      <div class="todo-button-group">
+        <button mat-icon-button>
+          <mat-icon>check_circle_outline</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>remove_circle_outline</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>delete_outline</mat-icon>
+        </button>
+      </div>
+    </mat-card>
+  </mat-card>
+
+  <button class="add-todo-button" mat-flat-button color="primary">
+    Add Todo
+  </button>
+</div>
