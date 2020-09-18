@@ -2,15 +2,15 @@
   <form class="signup-form">
     <mat-form-field>
       <mat-label>E-mail</mat-label>
-      <input (keyup)="inputEmail($event)" matInput />
+      <input [(ngModel)]="email" name="email" matInput />
     </mat-form-field>
     <mat-form-field>
       <mat-label>Password</mat-label>
-      <input (keyup)="inputPassword($event)" matInput type="password" />
+      <input [(ngModel)]="password" name="password" matInput type="password" />
     </mat-form-field>
     <mat-form-field>
       <mat-label>Full Name</mat-label>
-      <input (keyup)="inputFullName($event)" matInput />
+      <input [(ngModel)]="fullName" name="fullName" matInput />
     </mat-form-field>
   </form>
   <button

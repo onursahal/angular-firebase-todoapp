@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
 import { UserService } from '../../user.service';
+import { TodoList, User, Todo } from '../../user';
+import { MatDialog } from '@angular/material/dialog';
+import { ModifyListNameDialogComponent } from 'src/app/dialogs/modify-list-name-dialog/modify-list-name-dialog.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,15 +10,25 @@ import { UserService } from '../../user.service';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
-  todos;
-  user;
+  todos: TodoList;
+  user: User;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, public dialog: MatDialog) {
     this.userService.user.subscribe((data) => {
-      this.todos = data.todos;
+      this.todos = data.todoList;
       this.user = data;
-      console.log(this.todos);
     });
+  }
+
+  openDialog(todo: any): void {
+    this.listIndex(todo);
+    const dialogRef = this.dialog.open(ModifyListNameDialogComponent, {
+      width: '250px',
+    });
+  }
+
+  listIndex(todo: any) {
+    this.userService.listIndexSbj.next(this.user.todoList.indexOf(todo));
   }
 
   ngOnInit(): void {}

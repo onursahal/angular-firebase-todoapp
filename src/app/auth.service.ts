@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { User } from 'firebase';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root',
@@ -22,6 +22,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((response) => {
         console.log(response.user.uid);
+        localStorage.setItem('userID', response.user.uid);
         this.router.navigate(['dashboard']);
       })
       .catch((error) => {

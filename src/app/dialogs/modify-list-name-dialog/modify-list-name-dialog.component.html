@@ -1,0 +1,9 @@
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>New List Name</mat-label>
+    <input [(ngModel)]="newListName" name="newListName" matInput />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button (click)="updateName()" mat-button cdkFocusInitial>Ok</button>
+</div>

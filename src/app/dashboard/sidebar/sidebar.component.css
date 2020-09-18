@@ -24,19 +24,17 @@
   margin: 1rem;
 }
 .list-button-container {
-  display: grid;
+  display: flex;
 }
 .list-button {
-  grid-column: 1/20;
   font-size: 1rem;
   color: #900014;
 }
-.delete-todo {
-  grid-column: 20/21;
+.icon-button-container {
   display: flex;
   justify-content: flex-end;
   color: #900014;
 }
-.delete-icon {
-  font-size: 1.25rem;
+.icon {
+  font-size: 1rem;
 }

@@ -18,14 +18,4 @@ export class SignUpComponent implements OnInit {
   signup() {
     this.authService.signup(this.email, this.password, this.fullName);
   }
-
-  inputEmail(event) {
-    this.email = event.target.value;
-  }
-  inputPassword(event) {
-    this.password = event.target.value;
-  }
-  inputFullName(event) {
-    this.fullName = event.target.value;
-  }
 }

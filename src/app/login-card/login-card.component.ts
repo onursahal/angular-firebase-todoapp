@@ -44,12 +44,6 @@ export class LoginCardComponent implements OnInit {
   singUp() {
     this.router.navigate(['signup']);
   }
-  inputEmail(event: any) {
-    this.email = event.target.value;
-    console.log(this.email);
-  }
-  inputPassword(event: any) {
-    this.password = event.target.value;
-  }
+
   ngOnInit(): void {}
 }

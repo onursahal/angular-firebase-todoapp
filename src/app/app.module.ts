@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
@@ -9,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +26,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { ContentComponent } from './dashboard/content/content.component';
+import { ModifyListNameDialogComponent } from './dialogs/modify-list-name-dialog/modify-list-name-dialog.component';
+import { ModifyTodoDialogComponent } from './dialogs/modify-todo-dialog/modify-todo-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +37,12 @@ import { ContentComponent } from './dashboard/content/content.component';
     DashboardComponent,
     SidebarComponent,
     ContentComponent,
+    ModifyListNameDialogComponent,
+    ModifyTodoDialogComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
@@ -46,6 +53,7 @@ import { ContentComponent } from './dashboard/content/content.component';
     MatIconModule,
     MatListModule,
     MatToolbarModule,
+    MatDialogModule,
     HttpClientModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
