@@ -1,6 +1,6 @@
 <div class="root">
   <mat-card class="card-root">
-    <mat-card
+    <div
       [ngClass]="todo.isFinished ? 'todo-card-finished' : 'todo-card  '"
       *ngFor="let todo of todos"
     >
@@ -21,7 +21,7 @@
           <mat-icon>delete_outline</mat-icon>
         </button>
       </div>
-    </mat-card>
+    </div>
   </mat-card>
 
   <button

@@ -8,24 +8,28 @@
   margin: 1rem 1rem 0 1rem;
   background-color: #ffffff66;
   height: 85vh;
+  overflow: auto;
 }
 .todo-card {
-  margin: 1rem 0rem;
+  margin: 0.7rem 0rem;
   background-color: #ffd63f;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 5px;
 }
 .todo-card-finished {
-  margin: 1rem 0rem;
+  margin: 0.7rem 0rem;
   background-color: #6fd8be;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 5px;
 }
 .todo-content {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #900014;
+  padding: 1rem;
 }
 .todo-button-group {
   color: #900014;
