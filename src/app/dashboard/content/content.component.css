@@ -16,6 +16,13 @@
   align-items: center;
   justify-content: space-between;
 }
+.todo-card-finished {
+  margin: 1rem 0rem;
+  background-color: #6fd8be;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .todo-content {
   font-size: 1.5rem;
   color: #900014;

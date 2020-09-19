@@ -1,0 +1,9 @@
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>New Todo List Name</mat-label>
+    <input [(ngModel)]="newTodo.todo" name="newTodoList" matInput />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button (click)="addNewTodo()" mat-button cdkFocusInitial>Ok</button>
+</div>

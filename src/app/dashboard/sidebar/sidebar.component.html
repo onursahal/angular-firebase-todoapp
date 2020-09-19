@@ -11,7 +11,7 @@
           {{ todo.name }}
         </button>
         <div class="icon-button-container">
-          <button mat-icon-button (click)="openDialog(todo)">
+          <button mat-icon-button (click)="openModifyDialog(todo)">
             <mat-icon class="icon">settings</mat-icon>
           </button>
           <button mat-icon-button>
@@ -22,7 +22,12 @@
     </mat-action-list>
   </div>
   <div class="bottom-container">
-    <button class="new-todo" mat-flat-button color="primary">
+    <button
+      (click)="openNewTodoListDialog()"
+      class="new-todo"
+      mat-flat-button
+      color="primary"
+    >
       New Todo List
     </button>
   </div>

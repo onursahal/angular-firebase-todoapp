@@ -28,6 +28,8 @@ import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { ContentComponent } from './dashboard/content/content.component';
 import { ModifyListNameDialogComponent } from './dialogs/modify-list-name-dialog/modify-list-name-dialog.component';
 import { ModifyTodoDialogComponent } from './dialogs/modify-todo-dialog/modify-todo-dialog.component';
+import { NewTodoListDialogComponent } from './dialogs/new-todo-list-dialog/new-todo-list-dialog.component';
+import { NewTodoDialogComponent } from './dialogs/new-todo-dialog/new-todo-dialog.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { ModifyTodoDialogComponent } from './dialogs/modify-todo-dialog/modify-t
     ContentComponent,
     ModifyListNameDialogComponent,
     ModifyTodoDialogComponent,
+    NewTodoListDialogComponent,
+    NewTodoDialogComponent,
   ],
   imports: [
     BrowserModule,

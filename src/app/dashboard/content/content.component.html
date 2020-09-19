@@ -1,12 +1,20 @@
 <div class="root">
   <mat-card class="card-root">
-    <mat-card class="todo-card" *ngFor="let todo of todos">
+    <mat-card
+      [ngClass]="todo.isFinished ? 'todo-card-finished' : 'todo-card  '"
+      *ngFor="let todo of todos"
+    >
       <div class="todo-content">{{ todo.todo }}</div>
       <div class="todo-button-group">
-        <button mat-icon-button>
-          <mat-icon>check_circle_outline</mat-icon>
+        <button (click)="isFinished(todo)" mat-icon-button>
+          <mat-icon *ngIf="todo.isFinished; else showThis"
+            >remove_circle_outline</mat-icon
+          >
+          <ng-template #showThis>
+            <mat-icon>check_circle_outline</mat-icon>
+          </ng-template>
         </button>
-        <button (click)="openDialog(todo)" mat-icon-button>
+        <button (click)="openModifyDialog(todo)" mat-icon-button>
           <mat-icon>settings</mat-icon>
         </button>
         <button mat-icon-button>
@@ -16,7 +24,12 @@
     </mat-card>
   </mat-card>
 
-  <button class="add-todo-button" mat-flat-button color="primary">
+  <button
+    (click)="openNewTodoDialog()"
+    class="add-todo-button"
+    mat-flat-button
+    color="primary"
+  >
     Add Todo
   </button>
 </div>

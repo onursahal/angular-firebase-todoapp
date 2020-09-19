@@ -5,7 +5,7 @@ export interface Todo {
 
 export interface TodoList {
   name: string;
-  todos: Todo[];
+  todos?: Todo[];
 }
 
 export interface User {
